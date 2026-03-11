@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Product Form</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="page">
+  <div class="card">
+    <h1 class="title">Product Form</h1>
+    <p class="subtitle">
+      Enter product info and submit <span class="arrow">→</span> send to Telegram bot.
+    </p>
+
+    <form method="post" action="/sent" class="form">
+      <div class="field">
+        <label class="label" for="productName">Product Name</label>
+        <input
+          id="productName"
+          class="input"
+          type="text"
+          name="productName"
+          placeholder="Input product name"
+        />
+      </div>
+
+      <div class="row compact">
+        <div class="field small">
+          <label class="label" for="price">Price</label>
+          <input id="price" class="input"  type="text" name="price" placeholder="Input product price" />
+        </div>
+
+        <div class="field small">
+          <label class="label" for="qty">Qty</label>
+          <input id="qty" class="input" type="text" name="qty" placeholder="Input product qty." />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label" for="description">Description</label>
+        <textarea
+          id="description"
+          class="textarea"
+          rows="3"
+          name="description"
+          placeholder="Short details about the product..."
+        ></textarea>
+      </div>
+
+      <div class="field">
+        <label class="label" for="createdDate">Created Date</label>
+        <div class="date-wrap">
+          <input id="createdDate" class="input date" type="date" name="createdDate" 
+          />
+          <span class="date-icon" aria-hidden="true"></span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label" for="categoryName">Category Name</label>
+        <div class="select-wrapper">
+        <!-- <input
+          id="categoryName"
+          class="input"
+          type=""
+          name="categoryName"
+          placeholder="Input product category name"
+        /> -->
+        <select
+          id="categoryName"
+          class="input"
+          type=""
+          name="categoryName"
+          placeholder="Input product category name">
+          <option value="">Select category</option>
+          <option value="water">Water</option>
+          <option value="clothing">Clothing</option>
+          <option value="books">Books</option>
+          <option value="home">Home & Kitchen</option>
+        </select>
+      </div>
+    </div>
+
+      <button class="btn" type="submit">Submit Product</button>
+
+      <div class="divider"></div>
+
+      <p class="tip">
+        Tip: Use clear names, correct price, and qty before sending.
+      </p>
+    </form>
+  </div>
+</div>
+</body>
+</html>
